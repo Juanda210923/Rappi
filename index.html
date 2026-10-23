@@ -1,3 +1,4 @@
+<!-- Indica que este archivo usa HTML5. -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+  <!-- Barra superior con el logo y el menú de navegación. -->
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="RappiTravel, inicio">
       <span class="brand-icon">✈</span><span>Rappi<span class="brand-accent">Travel</span></span>
@@ -20,10 +22,12 @@
       <a href="#itinerario" class="nav-link" data-section="itinerario">Itinerario</a>
       <a href="#perfil" class="nav-link" data-section="perfil">Perfil</a>
     </nav>
-    <button class="profile-chip" id="profileShortcut"><span class="avatar">L</span><span>Mi perfil</span></button>
+    <button class="profile-chip" id="profileShortcut"><span class="avatar">P</span><span>Mi perfil</span></button>
   </header>
 
+  <!-- Aquí empieza el contenido principal de la página. -->
   <main>
+    <!-- Presentación inicial de RappiTravel. -->
     <section id="inicio" class="page-section hero-section">
       <div class="hero-copy">
         <span class="eyebrow"><span class="eyebrow-dot"></span> TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</span>
@@ -54,6 +58,7 @@
       </form>
     </section>
 
+    <!-- Sección para buscar y ver destinos turísticos. -->
     <section id="explorar" class="page-section content-section">
       <div class="section-heading"><div><span class="eyebrow">INSPÍRATE</span><h2>Destinos populares</h2><p>Lugares que vale la pena descubrir</p></div><span class="result-count" id="resultCount">6 destinos</span></div>
       <div class="destination-grid" id="destinationGrid">
@@ -85,11 +90,13 @@
       <p id="emptySearch" class="empty-state hidden">No encontramos destinos con esos criterios. Prueba otra búsqueda.</p>
     </section>
 
+    <!-- Aquí se muestran los destinos guardados como favoritos. -->
     <section id="favoritos" class="page-section content-section soft-section">
       <div class="section-heading"><div><span class="eyebrow">TU LISTA PERSONAL</span><h2>Mis favoritos <span class="inline-count" id="favoriteCount">0</span></h2><p>Guarda los lugares que quieres conocer</p></div></div>
       <div id="favoritesList" class="favorites-list"><div class="empty-card"><span class="empty-icon">♡</span><h3>Aún no tienes favoritos</h3><p>Presiona el corazón de un destino para guardarlo aquí.</p><a class="text-button" href="#explorar">Explorar destinos ↗</a></div></div>
     </section>
 
+    <!-- Formulario para crear y guardar planes de viaje. -->
     <section id="itinerario" class="page-section content-section">
       <div class="section-heading"><div><span class="eyebrow">ORGANIZA TU AVENTURA</span><h2>Planifica tu viaje</h2><p>Completa los datos y empieza a construir tu itinerario</p></div></div>
       <div class="planner-layout">
@@ -112,12 +119,14 @@
       <div class="saved-trips-wrap"><h3>Mis viajes guardados</h3><div id="savedTrips" class="saved-trips"><p class="muted-text">Todavía no has guardado ningún viaje.</p></div></div>
     </section>
 
+    <!-- Información y preferencias del perfil del usuario. -->
     <section id="perfil" class="page-section content-section soft-section">
       <div class="section-heading"><div><span class="eyebrow">TU ESPACIO</span><h2>Mi perfil</h2><p>Consulta tu actividad en RappiTravel</p></div></div>
-      <div class="profile-layout"><div class="profile-card"><div class="profile-avatar">L</div><h3>Laura Gómez</h3><p>laura.gomez@email.com</p><span class="profile-badge">Viajera exploradora ✨</span></div><div class="profile-stats"><div class="stat-card"><span class="stat-icon">✈</span><strong id="tripStat">0</strong><small>Viajes planeados</small></div><div class="stat-card"><span class="stat-icon">♡</span><strong id="favStat">0</strong><small>Destinos favoritos</small></div><div class="stat-card"><span class="stat-icon">⌖</span><strong>6</strong><small>Destinos para descubrir</small></div><div class="settings-card"><h3>Preferencias</h3><p>Recibe recomendaciones y organiza tus destinos a tu manera.</p><label class="setting-row"><span>Mostrar consejos de viaje</span><input type="checkbox" id="tipsToggle" checked></label><label class="setting-row"><span>Recordar mis preferencias</span><input type="checkbox" id="prefsToggle" checked></label></div></div></div>
+      <div class="profile-layout"><div class="profile-card"><div class="profile-avatar">P</div><h3>Pedro Martinez</h3><p>Pedro.Martinez@email.com</p><span class="profile-badge"></span></div><div class="profile-stats"><div class="stat-card"><span class="stat-icon">✈</span><strong id="tripStat">0</strong><small>Viajes planeados</small></div><div class="stat-card"><span class="stat-icon">♡</span><strong id="favStat">0</strong><small>Destinos favoritos</small></div><div class="stat-card"><span class="stat-icon">⌖</span><strong>6</strong><small>Destinos para descubrir</small></div><div class="settings-card"><h3>Preferencias</h3><p>Recibe recomendaciones y organiza tus destinos a tu manera.</p><label class="setting-row"><span>Mostrar consejos de viaje</span><input type="checkbox" id="tipsToggle" checked></label><label class="setting-row"><span>Recordar mis preferencias</span><input type="checkbox" id="prefsToggle" checked></label></div></div></div>
     </section>
   </main>
 
+  <!-- Pie de página con información final del sitio. -->
   <footer class="footer"><a class="brand" href="#inicio"><span class="brand-icon">✈</span><span>Rappi<span class="brand-accent">Travel</span></span></a><p>Planifica · Explora · Viaja</p><small>© 2026 RappiTravel · Tu próxima aventura empieza aquí.</small></footer>
 
   <dialog id="destinationDialog" class="destination-dialog">
@@ -125,6 +134,7 @@
     <div class="dialog-photo" id="dialogPhoto"></div><div class="dialog-content"><span class="eyebrow">DESCUBRE EL DESTINO</span><h2 id="dialogTitle">Destino</h2><p id="dialogDescription"></p><div class="dialog-facts" id="dialogFacts"></div><div class="dialog-actions"><button class="btn btn-primary" id="addToTrip">Añadir al itinerario</button><button class="btn btn-secondary" id="dialogFavorite">♡ Guardar favorito</button></div></div>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <!-- Carga el JavaScript que hace funcionar los botones y formularios. -->
   <script src="js/script.js"></script>
 </body>
-</html>
+                                                                                                                    </html>
